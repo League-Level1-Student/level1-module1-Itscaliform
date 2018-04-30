@@ -31,10 +31,15 @@ System.out.println("casting spell: " + spell);
 
 	public static void main(String[] args) {
 		// 1. make harry potter
+		HarryPotter HarryStyles= new HarryPotter();
 		// 2. become invisible
+		HarryStyles.makeInvisible(true);
 		// 3. spy on professor snape
+		HarryStyles.spyOnSnape();
 		// 4. become visible again
+		HarryStyles.makeInvisible(true);
 		// 5. cast a “stupefy” spell
+		HarryStyles.castSpell("stupefy");
 	}
 
 }
