@@ -28,6 +28,14 @@ public class BinaryConverter implements ActionListener{
         char theLetter = (char) asciiValue;
         return "" + theLetter;
     }
+	String convertWholeString(String binary) {
+		String billy = "";
+		for (int i = 0; i < binary.length(); i+=9) {
+		billy+=	convert(binary.substring(i,i+8));
+		}
+		return billy;
+		
+	}
 
 
  public void createUI() {
@@ -62,9 +70,10 @@ public void actionPerformed(ActionEvent e) {
 	// TODO Auto-generated method stub
 if (e.getSource()==button){
 	String bobert=text.getText();
-String text= convert(bobert);
+String text= convertWholeString(bobert);
 System.out.println(text);
 text2.setText(text);
 }
+
 }}
 
